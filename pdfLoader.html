@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Viewer</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    embed {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const url = new URL(window.location.href);
+    const pdfFileName = url.searchParams.get('pdf');
+
+    if (pdfFileName) {
+      const pdfPath = `PDFs/${pdfFileName}`;
+      const embedElement = document.createElement('embed');
+      embedElement.src = pdfPath;
+      embedElement.type = 'application/pdf';
+
+      document.body.appendChild(embedElement);
+    } else {
+      console.error('No PDF file specified.');
+    }
+  </script>
+</body>
+</html>

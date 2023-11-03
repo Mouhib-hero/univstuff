@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="description"
+  content="This is a simple personal web page in which the author presents some of the labs/works/projects that he did in university.">
+<meta name="author" content="Mouhib Ben Jemaa">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+
+<head>
+  <title>Home Page</title>
+  <link rel="icon" type="image/png" href="icons/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 20px;
+      background-image: url('images/moon2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="icons/icon.svg" alt="Icon" style="width: 25px; height: 25px;">
+    <span class="fade-from-left" style="font-family: 'Roboto'; font-size: 18px;"> University Stuff </span>
+    <button class="home-button scaleIn" onclick="location.href='home.html'"
+      style="animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards;">Home</button>
+    <button class="home-button scaleIn" onclick="location.href='about.html'"
+      style="animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards;">What's this?</button>
+    <button class="github-button fadeFromRight"
+      style="animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards;"><a
+        href="https://github.com/Mouhib-hero">Return to GitHub</a></button>
+  </div>
+
+  <div class="overlay-container-description fade-in-top">
+    <!--<div class="overlay-container">-->
+    <div class="description-container">
+      <div class="description scaleIn">
+        <p><b>This page is the home page of a simple GitHub Pages that contains some university projects' PDFs.</b></p>
+      </div>
+
+      <div class="about-section scaleIn" style="animation-delay: 0.2s; opacity:0; animation-fill-mode: forwards;">
+        <a href="https://www.linkedin.com/in/benjemaamouhib19/" class="linkedin-link" target="_blank">
+          <img class="linkedin-icon" src="icons/linked_in_icon.png" alt="LinkedIn Icon"
+            style="width: 20px; height: 20px;">
+          Mouhib Ben Jemaa - LinkedIn
+        </a>
+        <img src="icons/male_avatar.svg" alt="small image" style="margin-left: 12px; width: 100px; height: 100px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-container-cloud fade-in-top"
+    style="animation-delay: 0.5s; opacity:0; animation-fill-mode: forwards;">
+    <div class="section">
+      <div class="section-title">Cloud Labs [Azure platform]</div>
+      <div class="section-description">Few labs about some of the basics of Azure cloud platform.</div>
+      <div class="box">
+        <a href="pdfLoader.html?pdf=Cloud_1.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="images/cloud_pdf_img.jpg" alt="Cloud PDF Image" style="width: 180px; height: 170px;">
+          <div class="box-title"><a href="pdfLoader.html?pdf=Cloud_1.pdf" target="_blank"
+              rel="noopener noreferrer">Cloud & Virtualization</a></div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="pdfLoader.html?pdf=Cloud_2.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="images/cloud_pdf_img_2.jpg" alt="Cloud PDF Image 2" style="width: 180px; height: 170px;">
+          <div class="box-title"><a href="pdfLoader.html?pdf=Cloud_2.pdf" target="_blank"
+              rel="noopener noreferrer">Virtual Networks</a></div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="pdfLoader.html?pdf=Cloud_3.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="images/cloud_pdf_img_3.jpg" alt="Cloud PDF Image 3" style="width: 180px; height: 170px;">
+          <div class="box-title"><a href="pdfLoader.html?pdf=Cloud_3.pdf" target="_blank" rel="noopener noreferrer">Load
+              Balancers</a></div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="pdfLoader.html?pdf=Cloud_4.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="images/cloud_pdf_img_4.jpg" alt="Cloud PDF Image 4" style="width: 180px; height: 170px;">
+          <div class="box-title"><a href="pdfLoader.html?pdf=Cloud_4.pdf" target="_blank"
+              rel="noopener noreferrer">Traffic Manager, frontdoor & Firewall</a></div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="pdfLoader.html?pdf=Cloud_5.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="images/cloud_pdf_img_5.jpg" alt="Cloud PDF Image 5" style="width: 180px; height: 170px;">
+          <div class="box-title"><a href="pdfLoader.html?pdf=Cloud_5.pdf" target="_blank"
+              rel="noopener noreferrer">WebApp, FunctionApp et LogicApp</a></div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="overlay-container-telecom fadeFromBottom">
+    <div class="other-container">
+      <button class="prev" onclick="prevSlide()">Previous</button>
+      <button class="next" onclick="nextSlide()">Next</button>
+      <div class="other">Other Mentions</div>
+      <div class="overlay-rectangle"></div>
+    </div>
+    <div class="slider fadeFromLeft" style="animation-delay: 1s; ">
+
+      <div class="section-telecom">
+        <div class="section-title-telecom">DevOps</div>
+        <div class="box-telecom">
+          <img src="images/devops.jfif" alt="DevOps PDF Image" style="width: 200px; height: 170px;">
+          <div class="box-content-telecom">
+            <div class="box-title-telecom"><a href="pdfLoader.html?pdf=devops_pipelines.pdf" target="_blank"
+                rel="noopener noreferrer"><b>Two pipelines with Jenkins & Docker</b></a></div>
+            <div class="box-description-telecom">Implemented a Jenkins pipeline that clones a repo, builds its docker
+              image and pushes it into dockerhub, for:
+              <li> 1- A simple Flask application that is responsible for a Register & login while defining rules for the
+                password strength and showing logs for the login attempts with ChartJs </li>
+              <li> 2- A simple springboot application that print "Bonjour".</li>
+              .
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-telecom">
+        <div class="section-title-telecom">Security</div>
+        <div class="box-telecom">
+          <img src="images/kerberos_vpn_image.png" alt="KerberosVPN PDF Image" style="width: 180px; height: 170px;">
+          <div class="box-content-telecom">
+            <div class="box-title-telecom"><a href="pdfLoader.html?pdf=KerberosVPN.pdf" target="_blank"
+                rel="noopener noreferrer"><b>VPN using TUN/TAP with Kerberos</b></a></div>
+            <div class="box-description-telecom">Implemented a Client/Server encrypted tunnel with Kerberos and written
+              in Python.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-telecom">
+        <div class="section-title-telecom">Telecommunication</div>
+        <div class="box-telecom">
+          <img src="images/telecommunication_pdf_image.jpg" alt="Telecommunication PDF Image">
+          <div class="box-content-telecom">
+            <div class="box-title-telecom"><a href="pdfLoader.html?pdf=Paper_telecom.pdf" target="_blank"
+                rel="noopener noreferrer"><b>Study of a research paper</b></a></div>
+            <div class="box-description-telecom">Conducted an in-depth study of the research paper 'Statistical
+              Assessment of IP Multimedia Subsystem in a Softwarized Environment: a Queuing Networks Approach',
+              replicating the simulations and summarizing the findings in a comprehensive report.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-telecom">
+        <div class="section-title-telecom">Distributed Systems</div>
+        <div class="box-telecom">
+          <img src="images/distributed_sys_image.jpg" alt="Telecommunication PDF Image">
+          <div class="box-content-telecom">
+            <div class="box-title-telecom"><a href="pdfLoader.html?pdf=Distributed_file_sharing_system.pdf"
+                target="_blank" rel="noopener noreferrer"><b>Distributed file sharing system</b></a></div>
+            <div class="box-description-telecom">Implemented the "Gnutella" peer-to-peer strategy, where each peer can
+              act as both client and server.
+              <br>*-First approach: using java sockets <br> *-Second approach: using RMI (Remote Method Invocation)
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="button-container">
+      <button class="customButton" id="toggleAutoSlide">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text" id="autoSlideButtonText">Stop AutoSlide</span>
+      </button>
+    </div>
+
+  </div>
+  <!--<div id="error-message" class="error-message"></div>-->
+
+  <footer>
+    Thanks to <a href="https://undraw.co/illustrations">undraw.co</a> for the illustrations, and <a href="https://icons8.com/icons/set/linkedin--white">icon8</a> for the icons, hosted by <a
+      href="https://pages.github.com">GitHub Pages</a>.
+  </footer>
+  <script>
+    const slides = document.querySelectorAll('.section-telecom');
+    let currentIndex = 0;
+    const slider = document.querySelector('.slider');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    /* Old tests for the method that shows the slider components */
+    /*function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          //slide.classList.add('active');
+          //slide.style.transform = 'translateX(0)';
+          // Optionally, you can add a different initial offset if desired
+          // slide.style.transform = `translateX(${initialOffset}px)`;
+          slide.style.display = 'block';
+        } else {
+          //slide.classList.remove('active');
+          //slide.style.transform = 'translateX(100%)';
+          slide.style.display = 'none';
+        }
+        console.log("i",i);
+        console.log("index inside boucle",index);
+        console.log("slide",slide);
+        console.log("___boucle______");
+      });
+      console.log("index outside boucle", index);
+      console.log("___________________")
+      currentIndex = index;
+    }*/
+    /*function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.style.transform = 'translateX(0)';
+          slide.style.display = 'block';
+        } else if (i < index) {
+          slide.style.transform = 'translateX(-100%)';
+          slide.style.display = 'none';
+        } else {
+          slide.style.transform = 'translateX(100%)';
+          slide.style.display = 'none';
+        }
+      });
+      currentIndex = index;
+    }*/
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+          slide.classList.remove('prev', 'next');
+        } else if (i < index) {
+          slide.classList.remove('active', 'next');
+          slide.classList.add('prev');
+        } else {
+          slide.classList.remove('active', 'prev');
+          slide.classList.add('next');
+        }
+      });
+      currentIndex = index;
+    }
+
+
+    /*
+        function nextSlide() {
+          
+          console.log("before calcul ",currentIndex);
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+          console.log("slides.length ",slides.length);
+          console.log("after calcul ",currentIndex);
+          console.log("###########################################")
+        }
+    
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          showSlide(currentIndex);
+        }
+    */
+    let cycleCount = 0; // Initialize the cycle count
+    const initialIndex = 0; // Store the initial index
+
+    /*function nextSlide() {
+      if (currentIndex*2 < slides.length - 1) {
+        currentIndex++;
+        console.log("currentindex ",currentIndex);
+        console.log("slides.length ", slides.length);
+        console.log("________")
+      } else {
+        currentIndex = 0; // Start a new cycle
+        cycleCount++;
+        console.log("cycle ",cycleCount);
+        console.log("__________")
+      }
+      showSlide(currentIndex);
+
+      // Check if the full cycle has been completed
+      if (cycleCount*2 > 0 && currentIndex*2 === initialIndex) {
+        // Full cycle completed, go back to the initial current index
+        currentIndex = initialIndex;
+        console.log("initial ", currentIndex);
+      }
+    }
+
+    function prevSlide() {
+      if (currentIndex*2 > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = slides.length - 1; // Wrap to the last slide
+        cycleCount--;
+      }
+      showSlide(currentIndex);
+
+      // Check if the full cycle has been completed
+      if (cycleCount < 0 && currentIndex === initialIndex) {
+        // Full cycle completed in reverse, go back to the initial current index
+        currentIndex = initialIndex;
+      }
+    }*/
+    let isAnimating = false;
+    // Add this function to show the error message
+    function showErrorMessage(message) {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = message;
+
+      // Show the error message
+      errorMessage.style.display = 'block';
+
+      // Set a timeout to hide the error message after 3 seconds (3000 milliseconds)
+      setTimeout(() => {
+        errorMessage.style.display = 'none'; // Hide the error message
+      }, 3000);
+    }
+
+
+    // Add this function to hide the error message
+    function hideErrorMessage() {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.style.bottom = '-500px'; // Hide the message below the viewport
+    }
+
+
+    function nextSlide() {
+      if (isAnimating) {
+        //showErrorMessage('Whoa! That is fast! Please wait for the animation to finish');
+        return; // If already animating, do nothing
+      }
+
+      isAnimating = true; // Set the animation flag
+
+      if (currentIndex < slides.length - 1) {
+        /*console.log("currentindex ", currentIndex);*/
+        currentIndex++;
+      } else {
+        currentIndex = 0; // Start a new cycle
+        cycleCount++;
+        /*console.log("cyclecount ", cycleCount);
+        console.log("______cycle_end_________")*/
+      }
+      showSlide(currentIndex);
+      //console.log("currentindexslide ", currentIndex);
+
+      // Check if the full cycle has been completed
+      if (cycleCount > 0 && currentIndex === initialIndex) {
+        // Full cycle completed, go back to the initial current index
+        currentIndex = initialIndex;
+        //console.log("initialindex ", initialIndex);
+      }
+      //console.log("____________click_next____________")
+
+      // Allow the next animation to occur after a brief delay
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500); // Adjust the delay as needed
+    }
+
+    function prevSlide() {
+      if (isAnimating) {
+        showErrorMessage('Whoa! That is fast! Please wait for the animation to finish');
+        return; // If already animating, do nothing
+      }
+
+      isAnimating = true; // Set the animation flag
+
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = slides.length - 1; // Wrap to the last slide
+        cycleCount--;
+      }
+      showSlide(currentIndex);
+
+      // Check if the full cycle has been completed
+      if (cycleCount < 0 && currentIndex === initialIndex) {
+        // Full cycle completed in reverse, go back to the initial current index
+        currentIndex = initialIndex;
+      }
+
+      // Allow the next animation to occur after a brief delay
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500); // Adjust the delay as needed
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+
+    // AutoSlide Part -- Define variables
+    let isAutoSlide = true; // Start auto slide by default
+    let autoSlideInterval;
+    let autoSlideDelay = 4; // Initial auto slide delay in seconds
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, autoSlideDelay * 1000); // Start auto slide with the specified interval
+      document.getElementById('autoSlideButtonText').textContent = 'Stop AutoSlide';
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+      isAutoSlide = false;
+      document.getElementById('autoSlideButtonText').textContent = 'Start AutoSlide';
+    }
+
+    // Attach event listener to the button
+    const toggleAutoSlideButton = document.getElementById('toggleAutoSlide');
+    toggleAutoSlideButton.addEventListener('click', function () {
+      if (isAutoSlide) {
+        stopAutoSlide();
+      } else {
+        startAutoSlide();
+      }
+    });
+
+    toggleAutoSlideButton.addEventListener('mouseenter', function () {
+      // Create and show the tooltip when hovering
+      const tooltip = document.createElement('div');
+      tooltip.classList.add('tooltip');
+      tooltip.textContent = `The delay of the autoslide is ${autoSlideDelay} seconds`;
+      toggleAutoSlideButton.appendChild(tooltip);
+    });
+
+    toggleAutoSlideButton.addEventListener('mouseleave', function () {
+      // Remove the tooltip when the mouse leaves the button
+      const tooltip = toggleAutoSlideButton.querySelector('.tooltip');
+      if (tooltip) {
+        tooltip.remove();
+      }
+    });
+
+    // Automatically start the slideshow
+    startAutoSlide();
+
+    // Show the initial slide
+    showSlide(currentIndex);
+
+  </script>
+</body>
+
+</html>

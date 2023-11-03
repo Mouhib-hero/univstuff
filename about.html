@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="description"
+    content="This is a simple personal web page in which the author presents some of the labs/works/projects that he did in university.">
+<meta name="author" content="Mouhib Ben Jemaa">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+
+<head>
+    <title>About Page</title>
+    <link rel="icon" type="image/png" href="icons/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            background-image: url('images/moon.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .about-content {
+            background-color: #f9f9f9;
+            opacity: 0.7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgb(241, 110, 110);
+        }
+
+
+        .about-content h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about-content a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .welcome {
+            color: red;
+            animation: blink 1.5s infinite, rainbow 3s infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: black;
+                /*opacity: 1;*/
+            }
+
+            50% {
+                color: red;
+                /*opacity: 0;*/
+            }
+            100% {
+                color: black;
+                /*opacity: 1;*/
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+<body>
+
+    <div class="navbar">
+        <img src="icons/icon.svg" alt="Icon" style="width: 25px; height: 25px;">
+        <span class="fade-from-left" style="font-family: 'Roboto'; font-size: 18px;"> University Stuff </span>
+        <button class="home-button scaleIn" onclick="location.href='home.html'"
+            style="animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards;">Home</button>
+        <button class="home-button scaleIn" onclick="location.href='about.html'"
+            style="animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards;">What's this?</button>
+        <button class="github-button fadeFromRight"
+            style="animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards;"><a
+                href="https://github.com/Mouhib-hero">Return to GitHub</a></button>
+    </div>
+
+    <div class="overlay-container-description fade-in-top">
+        <div class="about-content" id="about-content" style="color: white; display: block;">
+            <h1>About This Website</h1>
+            <p class="welcome">
+                <b>Welcome to my personal website!</b>
+            </p>
+
+            <p>
+                I share my academic journey and showcase projects from my university studies which I did most of them
+                with my teammates.
+            </p>
+            <p>
+                I wanted to reflect my dedication, effort, and knowledge in diverse fields with this simple website.
+
+                It serves as a portfolio that demonstrates my capabilities and passion for learning.
+            </p>
+            <p>
+                I want to make my educational achievements accessible to anyone interested, including potential
+                employers.
+
+                This website is proof of my commitment to continuous improvement and serious work.
+            </p>
+        </div>
+        <div class="button-container">
+            <button class="customButton" id="sceneryToggle">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text" id="scenery">Enjoy the scenery</span>
+            </button>
+        </div>
+    </div>
+    <footer>
+        Thanks to <a href="https://undraw.co/illustrations">undraw.co</a> for the illustrations, and <a
+            href="https://icons8.com/icons/set/linkedin--white">icon8</a> for the icons, hosted by <a
+            href="https://pages.github.com">GitHub Pages</a>.
+    </footer>
+</body>
+<script>
+    document.getElementById('sceneryToggle').addEventListener('click', function () {
+        var sceneryButton = document.getElementById('scenery');
+        var aboutContent = document.getElementById('about-content');
+
+        if (aboutContent.style.display === 'none' || aboutContent.style.display === '') {
+            aboutContent.style.display = 'block'; // Show the box
+            sceneryButton.textContent = 'Enjoy the scenery'; // Change button text
+        } else {
+            aboutContent.style.display = 'none'; // Hide the box
+            sceneryButton.textContent = 'Put the curtains back'; // Change button text
+        }
+    });
+
+
+</script>
+
+</html>

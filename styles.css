@@ -1,0 +1,741 @@
+
+
+  .overlay-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay-container-description {
+    background-color: rgba(148, 142, 142, 0.4);
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 95%;
+    height: 100%;
+  }
+
+  .overlay-container-cloud {
+    background-color: rgba(104, 104, 121, 0.4);
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 95%;
+    height: 100%;
+  }
+
+  .overlay-container-telecom {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 95%;
+    height: 100%;
+  }
+
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar button:hover {
+    color: cyan;
+    background-color: #555;
+  }
+
+  .home-button {
+    margin-left: 30px;
+  }
+
+  .github-button {
+    margin-left: auto;
+    /* Pushes this button to the far right */
+  }
+
+  .github-button a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .github-button a:hover {
+    color: cyan;
+    background-color: #555;
+  }
+
+  .description-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px 20px 20px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    color: white;
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-top: -20px;
+  }
+
+  .about-section img {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .linkedin-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    /* Align icon vertically with the link */
+  }
+
+  .linkedin-link {
+    color: #f0ffff;
+    transition: color 0.3s ease;
+  }
+
+  .linkedin-link:hover {
+    color: cyan;
+  }
+
+  .section {
+    margin-top: 20px;
+    padding: 20px;
+    clear: both;
+    /* Clear float to separate sections */
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e8dada;
+  }
+
+  .box {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+    vertical-align: top;
+    /* Align the box to the top */
+  }
+
+  .box img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+    /* Border for images */
+  }
+
+  /*.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #ff004f;
+    /* Your desired glowing color */
+  /*transform: scale(0.8);
+    filter: blur(5px);
+    /* Adjust the blur to control the glow intensity */
+  /*opacity: 0;
+    transition: opacity 0.5s 0.2s;
+    /* Add a 0.2s delay to the opacity transition */
+  /*}*/
+
+  .box:hover {
+    transform: translateY(-5px);
+    /* Move the box up by 5 pixels when hovered */
+    /* Add a transition for smooth hover animation */
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 10px rgba(255, 146, 146, 0.5);
+  }
+
+  /*.box:hover::before {
+    opacity: 1;
+  }*/
+
+  .box-title {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    max-height: 3.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .box-title a {
+    font-size: 16px;
+    line-height: 1.2em;
+    color: rgb(255, 216, 216);
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+
+  .box-title a:hover {
+    color: rgb(27, 255, 236);
+  }
+
+  .box-description {
+    font-size: 14px;
+    color: #333;
+  }
+
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-description {
+    font-size: 14px;
+    color: #c5b8b8;
+    padding-bottom: 10px;
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 120%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-family: Verdana;
+    background-color: rgb(47, 70, 103);
+    color: rgb(230, 215, 215);
+    border: none;
+    cursor: pointer;
+    margin-top: -20px;
+    z-index: 3;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+  }
+
+  .prev:hover,
+  .next:hover {
+    color: cyan;
+    background-color: rgb(96, 116, 143);
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .section-telecom {
+    min-width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+    /*animation: slideIn 0.3s ease-in-out forwards;*/
+  }
+
+
+  /*.section-telecom.active {
+    animation: slideOut 0.3s ease-in-out forwards;
+  }*/
+
+
+  .section-telecom.active {
+    transform: translateX(0);
+    display: block;
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
+
+  .section-telecom.prev {
+    transform: translateX(-100%);
+    display: none;
+    animation: slideOut 0.3s ease-in-out forwards;
+  }
+
+  .section-telecom.next {
+    transform: translateX(100%);
+    display: none;
+    animation: slideOut 0.3s ease-in-out forwards;
+  }
+
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .section-title-telecom {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e8dada;
+  }
+
+  /* CSS for Box Content */
+  .box-telecom {
+    display: flex;
+  }
+
+  .box-telecom:hover {
+    transform: translateY(-5px);
+    /* Move the box up by 5 pixels when hovered */
+    /* Add a transition for smooth hover animation */
+    transition: transform 0.3s ease;
+    box-shadow: 4px 5px 10px rgba(215, 46, 46, 0.5);
+    ;
+  }
+
+  .box-telecom img {
+    max-width: 100%;
+    /*height: auto;*/
+    width: auto;
+    /* Set fixed width */
+    height: 170px;
+    /* Set fixed height */
+    border: 1px solid black;
+  }
+
+  .box-telecom .box-content-telecom {
+    flex-grow: 1;
+    margin-left: 15px;
+  }
+
+  .box-telecom .box-title-telecom {
+    margin-bottom: 10px;
+  }
+
+  .box-telecom .box-title-telecom a {
+    font-size: 18px;
+    color: rgb(255, 210, 210);
+    transition: color 0.3s ease;
+  }
+
+  .box-title-telecom a:hover {
+    color: cyan;
+  }
+
+  .box-telecom .box-description-telecom {
+    font-size: 16px;
+    color: #000000;
+  }
+
+  /* CSS for the "Other" label and overlay rectangle */
+  .other-container {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .other {
+    background-color: rgb(226, 194, 194);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-family: 'Fira Sans';
+    font-size: 18px;
+  }
+
+  .overlay-rectangle {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 0;
+  }
+
+  /* -- animation -- */
+  .fadeIn {
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scaleIn {
+    animation: scaleIn 1s ease;
+  }
+
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 1s ease;
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .fade-in-bottom {
+    animation: fadeInBottom 1s ease;
+  }
+
+  @keyframes fadeInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .rotate-in {
+    animation: rotateIn 1s ease;
+  }
+
+  @keyframes rotateIn {
+    0% {
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotate(0);
+    }
+  }
+
+  .bounce-in {
+    animation: bounceIn 1s ease;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .fade-in-top {
+    animation: fadeInTop 1s ease;
+  }
+
+  @keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-from-top {
+    animation: slideFromTop 1s ease;
+  }
+
+  @keyframes slideFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .slide-from-left {
+    animation: slideFromLeft 1s ease;
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  .slide-from-right {
+    animation: slideFromRight 1s ease;
+  }
+
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .fade-from-left {
+    animation: fadeFromLeft 1s ease, slideFromLeft 1s ease;
+  }
+
+  @keyframes fadeFromLeft {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fadeFromBottom {
+    animation: fadeInFromBottom 1s ease forwards;
+  }
+
+  @keyframes slideFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .slideFromBottom {
+    animation: slideFromBottom 1s ease forwards;
+  }
+
+  @keyframes fadeInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeFromRight {
+    animation: fadeInFromRight 1s ease forwards;
+  }
+
+
+  /* -- */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    /*position: fixed;*/
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    font-size: 12px;
+  }
+
+  /* -- Responsiveness -- */
+
+  /* media query to adjust the layout for smaller screens */
+  @media (max-width: 768px) {
+    .box-telecom {
+      flex-direction: column;
+      /* Stack the elements vertically */
+      text-align: center;
+    }
+
+    .box-telecom img {
+      margin-bottom: 10px;
+      /* Add space between image and text */
+    }
+  }
+
+
+  .error-message {
+    position: fixed;
+    /* Initially hide the message below the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(252, 117, 117);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: bottom 0.3s ease;
+    animation: slideInError 0.5s ease 1s forwards, slideOutError 0.5s ease 8s forwards;
+    z-index: 1000;
+    display: none;
+  }
+
+  @keyframes slideInError {
+    from {
+      bottom: -50px;
+    }
+
+    to {
+      bottom: 0;
+    }
+  }
+
+  @keyframes slideOutError {
+    from {
+      bottom: 0;
+    }
+
+    to {
+      bottom: -50px;
+    }
+  }
+
+  .button-container {
+    text-align: center;
+    /* Center its children horizontally */
+  }
+
+  .customButton {
+    position: relative;
+    background: linear-gradient(45deg, #ff77a9, #f66161);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transform: scale(0.9);
+    /* Add the following properties for centering */
+    display: inline-block;
+    margin: 0 auto;
+    /* Horizontally center the button */
+  }
+
+
+  .customButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px rgba(233, 83, 83, 0.5);
+    background: linear-gradient(45deg, #65a6a6, #a4f6ff);
+    color: #ffffff;
+  }
+
+  .customButton:active {
+    background: linear-gradient(45deg, #ffffff, #ff77a9);
+    animation: shine 0.5s linear infinite alternate;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(20px);
+    }
+  }
+
+  .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 8px;
+    top: -30px;
+    /* Adjust the tooltip position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
