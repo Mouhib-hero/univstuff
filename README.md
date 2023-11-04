@@ -10,7 +10,7 @@
 
 ---
 
-<p align="center"> 🌟 Welcome to my personal portfolio website, showcasing my academic journey and university projects.
+<p align="center"> 🌟 Welcome to my personal university portfolio website, showcasing my academic journey and university projects.
     <br> 
 </p>
 
@@ -25,4 +25,4 @@ This website serves as a showcase of my academic projects, lab works, and studie
 
 ## 🔗 Access the Website <a name="access-the-website"></a>
 
-You can explore my projects and learn more about my academic journey by visiting the website at [https://mbj-univstuff.github.io](https://mbj-univstuff.github.io).
+You can explore my projects and learn more about my academic journey by visiting the website at [https://mouhib-hero.github.io/univstuff/](https://mouhib-hero.github.io/univstuff/)
